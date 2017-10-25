@@ -1,0 +1,73 @@
+{
+  "iisSettings": {
+    "windowsAuthentication": false,
+    "anonymousAuthentication": true,
+    "iisExpress": {
+      "applicationUrl": "http://localhost:6001/",
+      "sslPort": 0
+    }
+  },
+  "profiles": {
+    "IIS Express": {
+      "commandName": "IISExpress",
+      "launchBrowser": true,
+      "launchUrl": "api/values",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    },
+    "ProfessionalAPI": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "launchUrl": "http://localhost:6001/api/values",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    },
+    "Test": {
+      "commandName": "web",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Test"
+      }
+    },
+    "LocalTest": {
+      "commandName": "IISExpress",
+      "launchBrowser": true,
+      "launchUrl": "http://localhost:6001/api/monitor",
+      "environmentVariables": {
+        "ASPNETCORE_URLS": "https//*:6001",
+        "ASPNETCORE_ENVIRONMENT": "localtest"
+      }
+    },
+    "Dev": {
+      "commandName": "web",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    },
+    "LocalDev": {
+      "commandName": "IISExpress",
+      "launchBrowser": true,
+      "launchUrl": "http://localhost:6001/api/monitor",
+      "environmentVariables": {
+        "ASPNETCORE_URLS": "https//*:6001",
+        "ASPNETCORE_ENVIRONMENT": "localdev"
+      }
+    },
+    "Prod": {
+      "commandName": "web",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Prod"
+      }
+    },
+    "LocalProd": {
+      "commandName": "IISExpress",
+      "launchBrowser": true,
+      "launchUrl": "http://localhost:6001/api/monitor",
+      "environmentVariables": {
+        "ASPNETCORE_URLS": "https//*:6001",
+        "ASPNETCORE_ENVIRONMENT": "localprod"
+      }
+    }
+  }
+}
