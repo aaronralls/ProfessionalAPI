@@ -9,7 +9,11 @@ namespace ProfessionalAPI2.Controllers
     [Route("api/[controller]")]
     public class ValuesController : Controller
     {
-        // GET api/values
+        
+        /// <summary>
+        /// GET api/values
+        /// </summary>
+        /// <returns></returns>
         [HttpGet]
         public async Task<IActionResult> Get()
         {
@@ -29,7 +33,12 @@ namespace ProfessionalAPI2.Controllers
             Response.Headers.Add("x-total-count", itemCount);
         }
 
-        // GET api/values/5
+        
+        /// <summary>
+        /// GET api/values/5
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         [HttpGet("{id}")]
         public async Task<IActionResult> Get(int id)
         {
@@ -37,21 +46,36 @@ namespace ProfessionalAPI2.Controllers
             return new OkObjectResult("value");
         }
 
-        // POST api/values
+        
+        /// <summary>
+        /// POST api/values
+        /// </summary>
+        /// <param name="value"></param>
+        /// <returns></returns>
         [HttpPost]
         public async Task<IActionResult> Post([FromBody]string value)
         {
             return new CreatedResult("api/Values/3", "value3");
         }
 
-        // PUT api/values/5
+        /// <summary>
+        /// PUT api/values/5
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="value"></param>
+        /// <returns></returns>
         [HttpPut("{id}")]
         public async Task<IActionResult> Put(int id, [FromBody]string value)
         {
             return Accepted(value);
         }
 
-        // DELETE api/values/5
+        /// <summary>
+        /// DELETE api/values/5
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+
         [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(int id)
         {
