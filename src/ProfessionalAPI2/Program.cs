@@ -12,7 +12,14 @@ namespace ProfessionalAPI
     {
         public static void Main(string[] args)
         {
-            var host = new WebHostBuilder()
+            var host = BuildWebHost(args);
+
+            host.Run();
+        }
+
+        public static IWebHost BuildWebHost(string[] args)
+        {
+            return new WebHostBuilder()
                 //Remove the server header to not expose the server type and framework.
                 //https://jeremylindsayni.wordpress.com/2016/12/22/creating-a-restful-web-api-template-in-net-core-1-1-part-4-securing-the-service-against-xss-clickjacking-and-drive-by-downloads/
                 .UseKestrel(options => options.AddServerHeader = false)
@@ -20,8 +27,6 @@ namespace ProfessionalAPI
                 .UseIISIntegration()
                 .UseStartup<Startup>()
                 .Build();
-
-            host.Run();
         }
     }
 }
